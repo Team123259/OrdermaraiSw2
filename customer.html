@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Customer Panel</h1>
+  <div class="section" id="customer">
+    <h2>เลือกออเดอร์ได้เลบคั้บบ</h2>
+    <div id="productList"></div>
+    <h3>ออเดอร์ของคุณ</h3>
+    <ul id="cartList"></ul>
+    <h3>ราคารวม: THB<span id="totalPrice"> 0</span></h3>
+    <input type="text" id="customerName" placeholder="Your Name">
+    <button class="button" id="placeOrder">กดสั่งออเดอร์</button>
+  </div>
+  <!-- Modal -->
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Order Placed Successfully!</h2>
+      <p>Please upload your payment slip below:</p>
+      <form id="slipForm">
+        <input type="file" id="paymentSlip" accept="image/*" required>
+        <button type="button" class="btn green" id="uploadSlip">Upload Slip</button>
+      </form>
+      <p id="uploadStatus" style="color: green; display: none;">Slip uploaded successfully!</p>
+    </div>
+  </div>
+
+  <script src="customer.js"></script>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
